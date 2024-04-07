@@ -158,7 +158,39 @@ text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ?
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
    let ftrol = { key: { remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { itemCount: 7777, status: 1, surface: 1, message: wm, orderTitle: wm, sellerJid: '0@s.whatsapp.net' }}}
     //let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
-   conn.sendMessage(m.chat, {
+    const arr = [
+ { text: `➳ *L*`, timeout: 200 },
+{ text: `➳ *L O*`, timeout: 200 },
+{ text: `➳ *L O A*`, timeout: 200 },
+{ text: `➳ *L O A D*`, timeout: 200 },
+{ text: `➳ *L O A D I*`, timeout: 200 },
+{ text: `➳ *L O A D I N*`, timeout: 200 },
+{ text: `➳ *L O A D I N G*`, timeout: 200 },
+{ text: `➳ *L O A D I N G .*`, timeout: 200 },
+{ text: `➳ *L O A D I N G . .*`, timeout: 200 },
+{ text: `➳ *L O A D I N G . . .*`, timeout: 200 },
+{ text: `➳ *L O A D I N G . .*`, timeout: 200 },
+{ text: `➳ *L O A D I N G .*`, timeout: 200 },
+{ text: `➳ *L O A D I N G*`, timeout: 200 },
+{ text: `➳ *W E L C O M E  T O  A K I R A A*`, timeout: 200 },
+{ text: all, timeout: 200 },
+  ]
+    conn.sendMessage(m.chat, {
+    text: arr,
+        contextInfo: {
+            mentionedJid: [m.sender],
+            groupMentions: [],
+            isForwarded: true,
+            forwardedNewsletterMessageInfo: {
+                newsletterJid: '120363252742621904@newsletter',
+               newsletterName: "Powered by : @dcodejuu",
+                serverMessageId: -1
+            },
+            forwardingScore: 256,
+          }
+    }, {quoted: ftrol})
+    
+    conn.sendMessage(m.chat, {
   	text: all,
         contextInfo: {
             mentionedJid: [m.sender],
