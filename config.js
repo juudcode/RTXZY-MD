@@ -22,12 +22,12 @@ global.nomerown = '6285742344873'
 global.namebot = 'Casper Bot'
 //per imagean
 global.ppKosong = 'https://i.ibb.co/3Fh9V6p/avatar-contact.png'
-global.didyou = 'https://telegra.ph/file/d723e79cc63a19e6aeb26.jpg'
+global.didyou = 'https://telegra.ph/file/042cea022b10f18513ea6.jpg'// 'https://telegra.ph/file/d723e79cc63a19e6aeb26.jpg'
 global.rulesBot = 'https://telegra.ph/file/1df2325bc0045a4769947.jpg'
 // Ubah Foto Kamu Disni
-global.thumbnail = 'https://telegra.ph/file/96bc76257b97dc255821f.jpg'
-global.thumb = 'https://telegra.ph/file/96bc76257b97dc255821f.jpg'
-global.logo = 'https://telegra.ph/file/50258d56b5cf27a7f8016.jpg'
+global.thumbnail = 'https://telegra.ph/file/042cea022b10f18513ea6.jpg'//'https://telegra.ph/file/96bc76257b97dc255821f.jpg'
+global.thumb = 'https://telegra.ph/file/042cea022b10f18513ea6.jpg'
+global.logo = 'https://telegra.ph/file/042cea022b10f18513ea6.jpg'
 
 //INI WAJIB DI ISI!//
 global.btc = 'ApiJuu' 
