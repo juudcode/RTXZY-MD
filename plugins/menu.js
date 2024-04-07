@@ -16,6 +16,7 @@ let moment = require('moment-timezone')
 let levelling = require('../lib/levelling')
 let tags = {
   'main': 'MENU UTAMA',
+  'rpg' : ' MENU RPG',
   'downloader': 'MENU DOWNLOADER',
   'sticker': 'MENU CONVERT',
   'advanced': 'ADVANCED',
@@ -155,7 +156,29 @@ text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ?
       level, limit, name, weton, week, date, dateIslamic, wib, wit, wita, time, totalreg, rtotalreg, role
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-  conn.relayMessage(m.chat, {
+   conn.sendMessage(m.chat, {
+  	text: all,
+        contextInfo: {
+            mentionedJid: [m.sender],
+            groupMentions: [],
+            isForwarded: true,
+            forwardedNewsletterMessageInfo: {
+                newsletterJid: '120363252742621904@newsletter',
+               newsletterName: "Powered by : @dcodejuu",
+                serverMessageId: -1
+            },
+            forwardingScore: 256,
+externalAdReply: {
+        title: `Apollo 22.52`,
+        body: wm,
+        thumbnailUrl: thumb,
+        sourceUrl: sgc,
+        mediaType: 1,
+        renderLargerThumbnail: true
+          }
+        }
+    },{quoted: ftrol})
+    /*conn.relayMessage(m.chat, {
   extendedTextMessage:{
                 text: text, 
                 contextInfo: {
@@ -169,7 +192,7 @@ text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ?
                         sourceUrl: 'https://whatsapp.com/channel/0029Va8ZH8fFXUuc69TGVw1q'
                     }
                 }, mentions: [m.sender]
-}}, {})
+}}, {})*/
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
